@@ -12,7 +12,9 @@ public class PickCharacter : MonoBehaviour
 
     private void Awake()
     {
-        pickCharacter=GetComponent<PickCharacter>();
+        Application.targetFrameRate = 60;
+        QualitySettings.vSyncCount = 0;
+        pickCharacter =GetComponent<PickCharacter>();
         male.SetActive(true);
         feMale.SetActive(true);
         Invoke("Wait", 0.5f);
